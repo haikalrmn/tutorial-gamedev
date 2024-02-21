@@ -1,0 +1,184 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://scenes/BlueShipGerak.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/ObjectiveArea.gd" type="Script" id=4]
+[ext_resource path="res://assets/playerShip1_green.png" type="Texture" id=5]
+[ext_resource path="res://scenes/PlayerPlane.gd" type="Script" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 4.74995, 55.5 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 38 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 50, 20 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 518, 10 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 510, 10 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 11, 301 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 6.5, 298.5 )
+
+[node name="MainLevel" type="Node"]
+__meta__ = {
+"_edit_vertical_guides_": [ 100.0, 70.0 ]
+}
+
+[node name="ObjectiveArea" type="Area2D" parent="."]
+position = Vector2( -7, -80 )
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectiveArea"]
+position = Vector2( 519, 244 )
+rotation = 1.57079
+shape = SubResource( 1 )
+
+[node name="GreenShip" type="KinematicBody2D" parent="."]
+position = Vector2( 816, 543 )
+script = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="GreenShip"]
+texture = ExtResource( 5 )
+
+[node name="VerticalCollision" type="CollisionShape2D" parent="GreenShip"]
+shape = SubResource( 2 )
+
+[node name="HorizontalCollision" type="CollisionShape2D" parent="GreenShip"]
+position = Vector2( 0, 10 )
+shape = SubResource( 3 )
+
+[node name="Obstacle" type="Node" parent="."]
+
+[node name="BlueShipGerak" parent="Obstacle" instance=ExtResource( 1 )]
+position = Vector2( 43, 433 )
+rotation = 1.5708
+
+[node name="BlueShipGerak2" parent="Obstacle" instance=ExtResource( 1 )]
+position = Vector2( 43, 539 )
+rotation = 1.5708
+
+[node name="BlueShipGerak3" parent="Obstacle" instance=ExtResource( 1 )]
+position = Vector2( 45, 326 )
+rotation = 1.5708
+
+[node name="BlueShipGerak7" parent="Obstacle" instance=ExtResource( 1 )]
+position = Vector2( 979, 434 )
+rotation = 4.71239
+
+[node name="BlueShipGerak8" parent="Obstacle" instance=ExtResource( 1 )]
+position = Vector2( 979, 540 )
+rotation = 4.71239
+
+[node name="BlueShipGerak9" parent="Obstacle" instance=ExtResource( 1 )]
+position = Vector2( 981, 327 )
+rotation = 4.71239
+
+[node name="BlueShipGerak13" parent="Obstacle" instance=ExtResource( 1 )]
+position = Vector2( 45, 115 )
+rotation = 1.5708
+
+[node name="BlueShipGerak14" parent="Obstacle" instance=ExtResource( 1 )]
+position = Vector2( 45, 221 )
+rotation = 1.5708
+
+[node name="BlueShipGerak16" parent="Obstacle" instance=ExtResource( 1 )]
+position = Vector2( 291, 477 )
+rotation = 3.14159
+
+[node name="BlueShipGerak17" parent="Obstacle" instance=ExtResource( 1 )]
+position = Vector2( 401, 479 )
+rotation = 3.14159
+
+[node name="BlueShipGerak18" parent="Obstacle" instance=ExtResource( 1 )]
+position = Vector2( 511, 478 )
+rotation = 3.14159
+
+[node name="BlueShipGerak19" parent="Obstacle" instance=ExtResource( 1 )]
+position = Vector2( 618, 478 )
+rotation = 3.14159
+
+[node name="BlueShipGerak20" parent="Obstacle" instance=ExtResource( 1 )]
+position = Vector2( 728, 477 )
+rotation = 3.14159
+
+[node name="BlueShipGerak21" parent="Obstacle" instance=ExtResource( 1 )]
+position = Vector2( 291, 395 )
+
+[node name="BlueShipGerak22" parent="Obstacle" instance=ExtResource( 1 )]
+position = Vector2( 401, 397 )
+
+[node name="BlueShipGerak23" parent="Obstacle" instance=ExtResource( 1 )]
+position = Vector2( 511, 396 )
+
+[node name="BlueShipGerak24" parent="Obstacle" instance=ExtResource( 1 )]
+position = Vector2( 618, 396 )
+
+[node name="BlueShipGerak25" parent="Obstacle" instance=ExtResource( 1 )]
+position = Vector2( 728, 395 )
+
+[node name="BlueShipGerak26" parent="Obstacle" instance=ExtResource( 1 )]
+position = Vector2( 294, 222 )
+rotation = 3.14159
+
+[node name="BlueShipGerak27" parent="Obstacle" instance=ExtResource( 1 )]
+position = Vector2( 404, 224 )
+rotation = 3.14159
+
+[node name="BlueShipGerak28" parent="Obstacle" instance=ExtResource( 1 )]
+position = Vector2( 514, 223 )
+rotation = 3.14159
+
+[node name="BlueShipGerak29" parent="Obstacle" instance=ExtResource( 1 )]
+position = Vector2( 621, 223 )
+rotation = 3.14159
+
+[node name="BlueShipGerak30" parent="Obstacle" instance=ExtResource( 1 )]
+position = Vector2( 731, 222 )
+rotation = 3.14159
+
+[node name="BlueShipGerak31" parent="Obstacle" instance=ExtResource( 1 )]
+position = Vector2( 294, 140 )
+
+[node name="BlueShipGerak32" parent="Obstacle" instance=ExtResource( 1 )]
+position = Vector2( 404, 142 )
+
+[node name="BlueShipGerak34" parent="Obstacle" instance=ExtResource( 1 )]
+position = Vector2( 621, 141 )
+
+[node name="BlueShipGerak35" parent="Obstacle" instance=ExtResource( 1 )]
+position = Vector2( 731, 140 )
+
+[node name="Edge" type="StaticBody2D" parent="."]
+
+[node name="UpperBound" type="CollisionShape2D" parent="Edge"]
+position = Vector2( 515, -10 )
+shape = SubResource( 5 )
+
+[node name="LowerBound" type="CollisionShape2D" parent="Edge"]
+position = Vector2( 511, 611 )
+shape = SubResource( 6 )
+
+[node name="LeftBound" type="CollisionShape2D" parent="Edge"]
+position = Vector2( -11, 300 )
+shape = SubResource( 7 )
+
+[node name="RIghtBound" type="CollisionShape2D" parent="Edge"]
+position = Vector2( 1033.5, 301.5 )
+shape = SubResource( 8 )
+
+[node name="BlueShipGerak7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 980, 113 )
+rotation = 4.71239
+
+[node name="BlueShipGerak8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 980, 219 )
+rotation = 4.71239
+
+[connection signal="body_entered" from="ObjectiveArea" to="ObjectiveArea" method="_on_ObjectiveArea_body_entered"]
